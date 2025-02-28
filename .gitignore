@@ -1,0 +1,5 @@
+.DS_Store
+.ipynb_checkpoints/README-checkpoint.md
+/is_payroll_env
+/dev_and_run/.ipynb_checkpoints
+/src/__pycache__
