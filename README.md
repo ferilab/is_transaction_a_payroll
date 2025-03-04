@@ -11,30 +11,32 @@ debit: amount withdrawn from account
 credit: amount entered into account
 is_payroll: the target variable (Boolean)
 
-The goal is to use this dataset to make a ML model predicting if a given user’s transaction is
-payroll or not. The approach includes:
+The goal is to use this dataset to make a ML model predicting if a given user’s transaction is payroll or not. The approach includes:
 
-- Data Exploration
-- Data Preprocessing and Cleaning
-- Feature Engineering/Selection
-- Model Building and Evaluation
+- Data Exploration (done in payroll.ipynb)
+- Data Preprocessing and Cleaning (done by scripts in src folder)
+- Feature Engineering/Selection (done by scripts in src folder)
+- Model Building and Evaluation (done by scripts in src folder)
 
 Folders:
 # data
 raw data (train_csv, test_csv)
+train.csv is used to train and evaluate the model.
+test.csv will be used for testing purpose with unseen data.
+The 
 results (embeddings, trained models, ...)
 
 # src
 utils.py that contains all utility functions
 
 # dev_and_run
-development and tests in a single notebook
+development and tests in a single notebook.
 
 # doc
 a discussion on findings
 
 # dags
-is considered for CI/CD: emply for now
+predict_payroll if the script for CI/CD
 
 # .git (might be hidden
-is considered for cloud run: empty for now
+deploy.yml in airflow folder triggers the code in GCP and runs the schedule (reruns the code as scheduled).
